@@ -25,9 +25,9 @@
 
   /* Tipografia: rem apenas para font-size (escala com configurações do usuário) */
   --fonte-principal: system-ui, -apple-system, sans-serif;
-  --tam-base: 1rem;     /* 16px */
-  --tam-h1: 2rem;       /* 32px */
-  --tam-h2: 1.5rem;     /* 24px */
+  --tam-base: 1rem; /* 16px */
+  --tam-h1: 2rem; /* 32px */
+  --tam-h2: 1.5rem; /* 24px */
   --tam-small: 0.875rem; /* 14px */
 }
 
@@ -43,4 +43,88 @@ body {
   background-color: var(--cor-fundo);
   margin: 0;
   padding: 0;
+}
+
+header {
+  background-color: var(--cor-primaria);
+  padding: var(--espaco-xs);
+}
+
+nav a,
+footer a {
+  color: white;
+  text-decoration: none;
+  padding: var(--espaco-sm);
+}
+
+.layout-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espaco-lg);
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--espaco-md);
+  /* display: grid;
+  grid-template-columns: 60% 40%; */
+}
+
+article,
+aside,
+.edu-box {
+  background-color: var(--cor-fundo-card);
+  padding: var(--espaco-md);
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  margin-bottom: var(--espaco-md);
+}
+
+/* .edu-box {
+  border-left: 8px solid var(--cor-primaria);
+  background: #e2fff1;
+} */
+
+.info-box {
+  border-left: 4px solid var(--cor-primaria);
+  background: #e2fff1;
+  padding: var(--espaco-sm);
+  border-radius: 8px;
+}
+
+a {
+  color: var(--cor-primaria-hover);
+}
+
+footer {
+  background: var(--cor-texto);
+  color: var(--cor-fundo);
+  text-align: center;
+  padding: var(--espaco-sm);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--espaco-sm);
+}
+
+/* aside {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+aside h2 {
+  grid-column: 1 / -1;
+  margin-bottom: 10px;
+}
+
+aside ul {
+  margin: 0;
+  padding-left: 20px;
+} */
+
+@media screen and (min-width: 768px) {
+  .layout-wrapper {
+    grid-template-columns: 60% 40%;
+  }
 }
